@@ -19,7 +19,6 @@ public class App {
             return num2;
     }
 
-
     //Method that returns the greater double value
     private static double greaterValue(double num1, double num2){
         if (num1 > num2) {
@@ -27,6 +26,7 @@ public class App {
         } else
             return num2;
     }
+
     //main class
     public static void main(String[] args) throws Exception {
 
@@ -35,10 +35,10 @@ public class App {
         System.out.println("The Sum of 37 , 43 and 100 = " + App.computeSum(37,43,100));
 
         //Calling the greaterValue method with integer parameters
-        System.out.println("The greater value between 45 and 100 is " + App.greaterValue(45,100));
+        System.out.println("The greater integer value between 45 and 100 is " + App.greaterValue(45,100));
 
         //Call the greaterValue method with double parameters
-        System.out.println("The greater value between 3.14 and 9.8 is " + App.greaterValue(3.14,9.8));
+        System.out.println("The greater double value between 3.14 and 9.8 is " + App.greaterValue(3.14,9.8));
 
     }
 }
