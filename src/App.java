@@ -1,44 +1,62 @@
 public class App {
-
-    //Overloaded Methods
-    //This method takes in two int parameters to add.
-    private static int computeSum(int num1, int num2) {
-        return num1 + num2;
-    }
-
-    //This method takes in 3 int parameters to add.
-    private static int computeSum(int num1, int num2, int num3) {
-        return num1 + num2 + num3;
-    }
-
-    //Create method that returns the greater integer value
-    private static int greaterValue(int num1, int num2) {
-        if (num1 > num2) {
-            return num1;
-        } else
-            return num2;
-    }
-
-    //Method that returns the greater double value
-    private static double greaterValue(double num1, double num2){
-        if (num1 > num2) {
-            return num1;
-        } else
-            return num2;
-    }
-
-    //main class
     public static void main(String[] args) throws Exception {
+        System.out.println("Wizards and Warlocks");
 
-        //Calling the Overloading Method that takes in 2 parameters, and 3 parameters
-        System.out.println("The Sum of 37 and 43 = " + App.computeSum(37,43));
-        System.out.println("The Sum of 37 , 43 and 100 = " + App.computeSum(37,43,100));
+        //Wizard and Warlock object class inheriting Character Class
+        Wizard Character1 = new Wizard("Player1", 1, 100, 150);
+        Warlock Character2 = new Warlock("Player2",1,100,150);
 
-        //Calling the greaterValue method with integer parameters
-        System.out.println("The greater integer value between 45 and 100 is " + App.greaterValue(45,100));
+        //character actions sequence
+        //1 skill required per round
+        System.out.print("\n");
+        //Displaying Character name and details
+        Character1.displayName();
+        Character1.displaydetails();
+        Character2.displayName();
+        Character2.displaydetails();
 
-        //Call the greaterValue method with double parameters
-        System.out.println("The greater double value between 3.14 and 9.8 is " + App.greaterValue(3.14,9.8));
+        //first round match
+        System.out.println("\n-------------------");
+        System.out.println("Let The Game Begin!\n");
+        System.out.println("Round 1\n");
+        //skill casts
+        Character1.fireStorm(Character2,Character1);
+        Character2.sunstrike(Character1,Character2);
+        //displaying current character details
+        System.out.print("\n");
+        Character1.displaydetails();
+        Character2.displaydetails();
+
+        //second round match
+        System.out.println("Round 2\n");
+        //skill casts
+        Character2.tailslap(Character1,Character2);
+        Character1.spitfire(Character2,Character1);
+        //displaying current character details
+        System.out.print("\n");
+        Character1.displaydetails();
+        Character2.displaydetails();
+
+        //Third round match
+        System.out.println("Round 3\n");
+        //skill casts
+        Character1.healingpool();
+        Character2.sunstrike(Character1,Character2);
+        //displaying current character details
+        System.out.print("\n");
+        Character1.displaydetails();
+        Character2.displaydetails();
+
+        //Fourth round match
+        System.out.println("Round 4\n");
+        //skill casts
+        Character2.tailslap(Character1,Character2);
+        Character1.fireStorm(Character2,Character1);
+        //displaying current character details
+        System.out.print("\n");
+        Character1.displaydetails();
+        Character2.displaydetails();
+
 
     }
 }
