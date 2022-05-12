@@ -1,8 +1,8 @@
 public class Character {
-    public String characterName = "Gandalf";
-    public int level = 0;
-    public int healthPoints = 100;
-    public int manaPoints = 200;
+    public String characterName;
+    public int level;
+    public int healthPoints;
+    public int manaPoints;
 
 
     //two Constructors
